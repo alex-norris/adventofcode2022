@@ -2,7 +2,8 @@
 with open('4.txt', 'r') as f:
     lines = [line.rstrip('\n') for line in f]
 
-count=0
+countA=0
+countB=0
 
 for i in lines:
     a = i.split(',')[0]
@@ -13,6 +14,9 @@ for i in lines:
     b2 = int(b.split('-')[1])
     if (a1 >= b1 and a2 <= b2) \
             or (a1 <= b1 and a2 >= b2):
-        count += 1
-
-print(count)
+        countA += 1
+    if (a1 <= b2 and a2 >= b1) \
+            or (a2 <= b1 and a1 >= b2):
+        countB += 1
+print(countA)
+print(countB)
