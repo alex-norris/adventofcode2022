@@ -18,5 +18,6 @@ for i in lines:
     if (a1 <= b2 and a2 >= b1) \
             or (a2 <= b1 and a1 >= b2):
         countB += 1
+
 print(countA)
 print(countB)
